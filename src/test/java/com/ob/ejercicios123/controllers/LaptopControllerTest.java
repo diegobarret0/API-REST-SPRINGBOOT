@@ -100,7 +100,7 @@ class LaptopControllerTest {
         ResponseEntity<Laptop> response =
                 testRestTemplate.exchange("/api/laptops/1", HttpMethod.DELETE,request,Laptop.class);
 
-        assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
+        assertEquals(HttpStatus.NO_CONTENT, response.getStatusCode());
     }
 
     @Test
